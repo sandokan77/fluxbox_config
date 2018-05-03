@@ -18,6 +18,7 @@
 [encoding] {UTF-8}
       [exec] (Console) {urxvt}
       [exec] (System Monitor) {xterm -e htop}
+      [exec] (Take Screenshot) {urxvt -e scrot -s -c -d 3 ~/Documents/screenshot.png}
 [submenu] (File Browsers)
       [exec] (Nautilus) {nautilus}
       #[exec] (Thunar) {thunar}
@@ -56,8 +57,8 @@
 
 [submenu] (Local admin)
 	[exec] (System log) {urxvt -e tail -f /var/log/messages}
-	[exec] (Fluxbox config files...) {gvim -p ~/.fluxbox/menu ~/.fluxbox/keys ~/.fluxbox/startup}
-	[exec] (System config files...) {gvim -p /etc/sysctl.conf /etc/devfs.conf /etc/devfs.rules /etc/rc.conf}
+	[exec] (Fluxbox config files...) {gvim -n -p ~/.fluxbox/menu ~/.fluxbox/keys ~/.fluxbox/startup}
+	[exec] (System config files...) {gvim -n -p /etc/sysctl.conf /etc/devfs.conf /etc/devfs.rules /etc/rc.conf}
 [end]
 
 
