@@ -109,7 +109,7 @@
 [submenu] (Fluxbox menu)
       [config] (Configure)
       [submenu] (System Styles) {Choose a style...}
-      [stylesdir] (/usr/local/share/fluxbox/styles)
+      [stylesdir] (/usr/share/fluxbox/styles)
 [end]
 [submenu] (User Styles) {Choose a style...}
       [stylesdir] (~/.fluxbox/styles)
