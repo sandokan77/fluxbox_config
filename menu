@@ -62,7 +62,9 @@
 	[submenu] (Slackware Linux How To(s))
 		[exec] (Most frequently used Linux commands) {firefox https://goo.gl/pAG42Q}
 		[exec] (How to add user to sudoers's list) {firefox http://gnu-linux-slackware.blogspot.co.nz/2009/05/adding-users-to-sudoers-file.html}
-	[end]
+		[exec] (How to transfer files with Dolphin over the network) {firefox https://www.pclinuxos.com/forum/index.php?topic=87054.0} 	
+		[exec] (Slackware Current install repo) {firefox https://mirrors.slackware.com/slackware/slackware-current/}
+[end]
 [end]
 
 #[submenu] (Games)
