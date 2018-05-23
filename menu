@@ -18,61 +18,33 @@
 [encoding] {UTF-8}
       [exec] (Console) {xfce4-terminal}
       [exec] (System Monitor) {xterm -e htop}
-      [exec] (Take Screenshot) {urxvt -e scrot -s -c -d 3 ~/Documents/screenshot.png}
+      [exec] (Take Screenshot) {urxvt -e scrot -s -c -d 1 ~/Documents/screenshot.png}
 [submenu] (File Browsers)
-      #[exec] (Nautilus) {nautilus}
+      [exec] (Dolphin) {dolphin}
+	#[exec] (Nautilus) {nautilus}
       [exec] (Thunar) {thunar}
       [exec]   (mc) {rxvt -e mc}
 [end]
 
 [submenu] (Internet Browsers)
       [exec] (Firefox) {firefox}
-      #[exec] (links-graphic) {links -driver x fluxbox.org}
-      #[exec] (links) {rxvt -e links fluxbox.org}
-      #[exec] (lynx) {rxvt -e lynx fluxbox.org}
-
+      [exec] (Chrome) {google-chrome-stable}
 [end]
 
-#[submenu] (Mail)
-#      [exec]   (kmail) {kmail}
-#      [exec]   (thunderbird) {thunderbird}
-#      [exec]   (mutt) {rxvt -e mutt}
-#      [exec]   (pine) {rxvt -e pine}
-#[end]
-#[submenu] (News)
-#      [exec]   (pan) {pan}
-#      [exec]   (slrn) {rxvt -e slrn}
-#      [exec]   (tin) {rxvt -e tin}
-#[end]
-[submenu] (IRC)
-      [exec]   (irssi) {rxvt -e irssi}
-[end]
 [submenu] (FTP)
       [exec]   (gftp) {gftp}
-#      [exec]   (ncftp) {rxvt -e ncftp}
-#      [exec]   (ftp) {rxvt -e ftp}
-#      [exec]   (lftp) {rxvt -e lftp}
 [end]
-#[submenu] (Analyzers)
-#      [exec]   (xnmap) {xnmap}
-#      [exec]   (nmapfe) {nmapfe}
-#[end]
-#      [exec]   (x3270) {x3270}
-#      [exec]   (wpa_gui) {wpa_gui}
-#[end]
 
+[submenu] (Development)
+	[exec] (Visual Studio Code) {/usr/share/code/code --unity-launch %F}
+	[exec] (Robotframework RIDE) {ride.py}
+	[exec] (Google URL shortener) {firefox https://goo.gl/}
+[end]
 
 [submenu] (Editors)
       [exec]   (gedit) {gedit}
       [exec]   (GVim) {gvim}
-      #[exec]   (VI) {xterm -e vi}
 [end]
-
-
-#[submenu] (FTP)
-#      [exec]   (pftp) {xterm -e pftp}
-#      [exec]   (ftp) {xterm -e ftp}
-#[end]
 
 [submenu] (Multimedia)
 	[exec] (Audio Mixer...) {urxvt -e alsamixer}
@@ -80,22 +52,22 @@
 	[exec] (Blender 2.79) {blender}      
 	[exec] (Inkscape) {inkscape}
 	[exec] (GIMP) {gimp}
-	#[exec]   (xv) {xv}
-	#[exec]   (xpaint) {xpaint}
 	[exec]   (xscreensaver-demo) {xscreensaver-demo}
-	#[exec]   (xlock) {xlock}
         [exec]   (krita) {krita}
-        #[exec] (Mesa gears) {gears}
+[end]
+[end]
 
-#[exec]   (ee) {ee}
+[submenu] (Education)
+	[exec] (Anki) {anki}
+	[submenu] (Slackware Linux How To(s))
+		[exec] (Most frequently used Linux commands) {firefox https://goo.gl/pAG42Q}
+		[exec] (How to add user to sudoers's list) {firefox http://gnu-linux-slackware.blogspot.co.nz/2009/05/adding-users-to-sudoers-file.html}
+	[end]
 [end]
-[end]
+
 #[submenu] (Games)
 #      [exec]   (enigma) {enigma}
 #[end]
-[submenu] (System Tools)
-      #[exec]   (top) {xterm -e top}
-[end]
 
 [submenu] (Local admin)
 	[exec] (System log) {urxvt -e tail -f /var/log/messages}
