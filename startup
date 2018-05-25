@@ -26,7 +26,8 @@ fi
 #chris's additions
 #fbsetbg -f ~/Downloads/Firefox_wallpaper.png  #my favorite blue wallpaper
 #fbsetbg -f /usr/share/backgrounds/mate/abstract/Flow.png
-fbsetbg -f ~/Downloads/free-linux-wallpaper_00060109.jpg
+#fbsetbg -f ~/Downloads/free-linux-wallpaper_00060109.jpg
+fbsetbg -f ~/Downloads/PoolBottom.png
 xscreensaver -no-splash &
 
 # And last but not least we start fluxbox.
