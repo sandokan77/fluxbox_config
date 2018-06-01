@@ -160,3 +160,4 @@ Mod4 m :ToggleCmd {ShowDesktop} {DeIconify all originquiet}
 # Print = 107
 #107 :Exec {urxvt -e scrot -s -c -d 1 ~/Pictures/screenshot.png}
 None Print :Exec ~/Projects/scripts/do_screenshot
+OnWindow Control Mod4 :RootMenu

@@ -16,13 +16,17 @@
 #     session.menuFile: ~/.fluxbox/my-menu
 [begin] (Fluxbox-1.3.7)
 [encoding] {UTF-8}
-      	[exec] (Keyboard => US) {setxkbmap us}
+      	[exec] (Shared Clipboard) {firefox https://docs.google.com/document/d/1z2xuTcTzHHfOzjagnjLV3rBCmIBkA1BxB-nK0KzzeBM/edit}
+	[exec] (Keyboard => US) {setxkbmap us}
 	[exec] (Keyboard => HU) {setxkbmap hu}
 	[exec] (Keyboard => DE) {setxkbmap de}
 	#[exec] (xfce4-terminal) {xfce4-terminal}
       [exec] (sakura) {sakura}
       [exec] (htop) {sakura -e htop}
-      [exec] (Take Screenshot) {scrot -s -c -d 0 ~/Pictures/screenshot.png}
+#      [exec] (Take Screenshot) {scrot -s -c -d 0 ~/Pictures/screenshot.png}
+#      [exec] (Last Screenshot -> Clipboard) {xclip -selection clipboard -t image/png -i ~/Pictures/screenshot.png}
+      [exec] (Take Screenshot) {scrot -s -c -d 0 ~/Pictures/screenshot.png && xclip -selection clipboard -t image/png -i ~/Pictures/screenshot.png}
+
 [submenu] (File Browsers)
       [exec] (Dolphin) {dolphin}
 	#[exec] (Nautilus) {nautilus}
@@ -46,11 +50,13 @@
 [end]
 
 [submenu] (Editors)
+      [EXEC]   (Kate) {kate}
       [exec]   (gedit) {gedit}
       [exec]   (GVim) {gvim}
 [end]
 
 [submenu] (Office)
+      [exec] (Libre Office 6.0) {libreoffice6.0}
       [exec] (Calligra Word) {calligrawords}
       [exec] (Calligra Sheets) {calligrasheets}
 [end]
@@ -71,15 +77,32 @@
 [submenu] (Education)
 	[exec] (Anki) {anki}
 	[exec] (DE -> HU dictionary) {firefox https://dehu.dict.cc/}
-	[submenu] (Slackware Linux How To(s))
+[end]
+
+[submenu] (Know Hows)
+	[submenu] (Slackware Linux)
 		[exec] (Most frequently used Linux commands) {firefox https://goo.gl/pAG42Q}
 		[exec] (How to add user to sudoers's list) {firefox http://gnu-linux-slackware.blogspot.co.nz/2009/05/adding-users-to-sudoers-file.html}
 		[exec] (How to transfer files with Dolphin over the network) {firefox https://www.pclinuxos.com/forum/index.php?topic=87054.0} 	
 		[exec] (Slackware Current install repo) {firefox https://mirrors.slackware.com/slackware/slackware-current/}
+		[exec] (alien slackbuilds) {firefox http://www.slackware.com/~alien/slackbuilds/}
+	[end]
+	[submenu] (Fluxbox)
 		[exec] (Fluxbox themes) {firefox https://www.box-look.org/browse/cat/139/page/7/ord/latest/}
 		[exec] (How to add Start menu to Fluxbox menubar) {firefox https://askubuntu.com/questions/151015/how-to-put-a-start-menu-button-on-fluxbox-toolbar}
-[end]
-[end]
+	[end]
+	
+	[submenu] (Robotframework) 
+        [exec] (Selenium with Python Doc -unofficial-) {firefox http://selenium-python.readthedocs.io/}	
+	[exec] (Selenium WebDriver Doc -unofficial-) {firefox http://selenium-python.readthedocs.io/api.html}
+	[exec] (Selenium Webdriver API official) {firefox https://seleniumhq.github.io/selenium/docs/api/py/api.html}
+	[exec] (Selenium remote.webelement API) {firefox https://seleniumhq.github.io/selenium/docs/api/py/webdriver_remote/selenium.webdriver.remote.webelement.html} 
+	[exec] (Robotframework 3.1.0 User Guide) {firefox http://robotframework.org/robotframework/3.0.1/RobotFrameworkUserGuide.html}
+		[exec] (Creating User Keywords) {firefox http://robotframework.org/robotframework/3.0.1/RobotFrameworkUserGuide.html#creating-user-keywords}
+		[exec] (Extending Robotframework) {firefox http://robotframework.org/robotframework/3.0.1/RobotFrameworkUserGuide.html#extending-robot-framework}
+		[exec] (Robotframework and Excel) {firefox http://laurent.bristiel.com/robot-framework-and-excel/}
+	[end]
+[end]	
 
 #[submenu] (Games)
 #      [exec]   (enigma) {enigma}
